@@ -1,0 +1,16 @@
+ #code {
+ 	font-family: Arial;
+ 	font-style: italic;
+ 	font-weight: bold;
+ 	border: 0;
+ 	letter-spacing: 2px;
+ 	color: blue;
+ 	background: #FFFFFF;
+ 	border: 0.5px solid #E5E5E5;
+ 	cursor: pointer;
+ 	line-height: 0;
+ 	font-size: 18px;
+ 	opacity:0.8;
+ 	height: 20px;
+ 	float: left;
+ }
