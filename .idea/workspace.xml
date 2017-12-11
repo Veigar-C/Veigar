@@ -2,71 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f464c83e-cac0-4a91-8f72-9143ab3d4e13" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/img/clear.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/artifacts/Veigar_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/artifacts/Veigar_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/dictionaries/Administrator.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__javax_javaee_api_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_41.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_mybatis_mybatis_3_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_aop_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_beans_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_context_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_core_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_expression_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_test_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_tx_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_web_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_5_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/Veigar.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/controller/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/dao/IUserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/Driver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/DrivingLicense.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/ViolationRecord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/service/IUserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/service/impl/UserServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/jdbc.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/logback.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/mapper/UserDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/spring-mvc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/spring-mybatis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/WEB-INF/views/hello.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/WEB-INF/views/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/css/jquery.mobile.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/css/viloation.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/js/home.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/js/jquery-1.6.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/js/jquery.mobile.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/test.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Veigar/src/test/java/com/veigar/dao/IUserDaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/artifacts/Veigar_war.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/artifacts/Veigar_war.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/artifacts/Veigar_war_exploded.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/artifacts/Veigar_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/dictionaries/Administrator.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/dictionaries/Administrator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_2.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_2.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_7.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_7.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_7.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__com_sun_mail_javax_mail_1_5_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__javax_javaee_api_7_0.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__javax_javaee_api_7_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_41.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_41.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_mybatis_mybatis_3_4_1.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_mybatis_mybatis_3_4_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_aop_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_aop_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_beans_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_beans_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_context_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_context_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_core_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_core_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_expression_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_expression_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_test_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_test_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_tx_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_tx_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_web_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_web_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_5_RELEASE.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_5_RELEASE.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Veigar/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/pom.xml" afterPath="$PROJECT_DIR$/../Veigar/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/controller/UserController.java" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/dao/IUserDao.java" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/dao/IUserDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/Driver.java" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/Driver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/DrivingLicense.java" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/DrivingLicense.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/User.java" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/ViolationRecord.java" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/model/ViolationRecord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/service/IUserService.java" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/service/IUserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/service/impl/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/jdbc.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/resources/logback.xml" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/logback.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/resources/mapper/UserDao.xml" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/mapper/UserDao.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/spring-mvc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/resources/spring-mybatis.xml" afterPath="$PROJECT_DIR$/../Veigar/src/main/resources/spring-mybatis.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/webapp/WEB-INF/views/hello.jsp" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/WEB-INF/views/hello.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/webapp/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/WEB-INF/views/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/webapp/css/viloation.css" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/css/viloation.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/webapp/js/home.js" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/js/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/main/webapp/test.jsp" afterPath="$PROJECT_DIR$/../Veigar/src/main/webapp/test.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Veigar/src/test/java/com/veigar/dao/IUserDaoTest.java" afterPath="$PROJECT_DIR$/../Veigar/src/test/java/com/veigar/dao/IUserDaoTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/../Veigar/out/" />
     <ignored path="$PROJECT_DIR$/../Veigar/target/" />
@@ -95,11 +83,9 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="230">
+              <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1427,8 +1413,16 @@
       <workItem from="1512788844311" duration="862000" />
       <workItem from="1512920744472" duration="4118000" />
       <workItem from="1512924966392" duration="1594000" />
-      <workItem from="1512970474387" duration="3597000" />
+      <workItem from="1512970474387" duration="3767000" />
     </task>
+    <task id="LOCAL-00001" summary="IDEA_GIT">
+      <created>1512974124588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1512974124588</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1464,7 +1458,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77913000" />
+    <option name="totallyTimeSpent" value="78083000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1494,13 +1488,13 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33032694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33032694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17650215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1523,7 +1517,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="IDEA_GIT" />
+    <option name="LAST_COMMIT_MESSAGE" value="IDEA_GIT" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1912,11 +1907,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Veigar/src/main/java/com/veigar/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="230">
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
