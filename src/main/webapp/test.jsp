@@ -11,6 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-
+    <%
+        request.getRequestDispatcher("/manager").forward(request, response);
+    %>
 </body>
 </html>

@@ -9,7 +9,10 @@ public class ViolationRecord {
     private String vDate;
     private String vState;
     private int vPoints;
+    private int vMoney;
+    private int vSMoney;
     private String vAddress;
+
 
     public String getCarNum() {
         return carNum;
@@ -59,24 +62,34 @@ public class ViolationRecord {
         this.vAddress = vAddress;
     }
 
-    public ViolationRecord(String carNum, String vDate, String vContent, String vState, int vPoints, String vAddress) {
+    public int getvMoney() {
+        return vMoney;
+    }
+
+    public void setvMoney(int vMoney) {
+        this.vMoney = vMoney;
+    }
+
+    public int getvSMoney() {
+        return vSMoney;
+    }
+
+    public void setvSMoney(int vSMoney) {
+        this.vSMoney = vSMoney;
+    }
+
+    public ViolationRecord(String carNum, String vContent, String vDate, String vState, int vPoints, int vMoney, int vSMoney, String vAddress) {
         this.carNum = carNum;
         this.vContent = vContent;
         this.vDate = vDate;
         this.vState = vState;
         this.vPoints = vPoints;
+        this.vMoney = vMoney;
+        this.vSMoney = vSMoney;
         this.vAddress = vAddress;
     }
 
-    @Override
-    public String toString() {
-        return "ViolationRecord{" +
-                "carNum='" + carNum + '\'' +
-                ", vContent='" + vContent + '\'' +
-                ", vDate='" + vDate + '\'' +
-                ", vState='" + vState + '\'' +
-                ", vPoints=" + vPoints +
-                ", vAddress='" + vAddress + '\'' +
-                '}';
+    public ViolationRecord() {
     }
+
 }

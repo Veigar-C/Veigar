@@ -116,6 +116,11 @@
       <artifactId>spring-test</artifactId>
       <version>${spring.version}</version>
     </dependency>
+      <dependency>
+          <groupId>com.veigar</groupId>
+          <artifactId>Veigar</artifactId>
+          <version>1.0-SNAPSHOT</version>
+      </dependency>
   </dependencies>
   <build>
     <finalName>Veigar</finalName>

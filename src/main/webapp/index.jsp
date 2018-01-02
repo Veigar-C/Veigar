@@ -33,10 +33,10 @@
                     <fieldset data-role="fieldcontain">
                         <label for="day" style="vertical-align: 100%;">号牌种类</label>
                         <select name="carType" id="day">
-                            <option value="bigCar">大型汽车</option>
-                            <option value="littleCar">小型汽车</option>
-                            <option value="outCar">外籍汽车</option>
-                            <option value="moto">摩托车</option>
+                            <option value="大型汽车">大型汽车</option>
+                            <option value="小型汽车">小型汽车</option>
+                            <option value="外籍汽车">外籍汽车</option>
+                            <option value="摩托车">摩托车</option>
                         </select>
                     </fieldset>
                 </li>
@@ -59,7 +59,7 @@
                 </li>
 
                 <li data-role="fieldcontain">
-                    <input type="submit" value="提交" data-theme="b" onclick="return check();selectUser()"/>
+                    <input type="button" value="提交" data-theme="b" onclick="return check()" id="selectUser"/>
                 </li>
             </ul>
         </form>

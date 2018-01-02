@@ -4,13 +4,43 @@
 <!-- 设置为IUserDao接口方法提供sql语句配置 -->
 <mapper namespace="com.veigar.dao.IUserDao">
 
-    <select id="selectUser" resultType="user" parameterType="long">
-        SELECT * FROM user WHERE id = #{id}
-    </select>
-    <select id="selectDriver" resultType="DrivingLicense" parameterType="String">
+    <select id="selectDriver" resultType="DrivingLicense" >
         SELECT * FROM drivinglicense WHERE carNum = #{carNum}
     </select>
-    <select id="selectRecord" resultType="ViolationRecord" parameterType="String">
+
+    <!--配置一个resultMap 指定返回的类型 -->
+    <resultMap id="ListVR" type="ViolationRecord">
+        <id column="carNum" property="carNum" />
+        <result column="vContent" property="vContent" />
+        <result column="vDate" property="vDate" />
+        <result column="vState" property="vState" />
+        <result column="vPoints" property="vPoints" />
+        <result column="vMoney" property="vMoney" />
+        <result column="vSMoney" property="vSMoney" />
+        <result column="vAddress" property="vAddress" />
+    </resultMap>
+    <select id="selectRecord" resultMap="ListVR" >
         SELECT * FROM violationrecord WHERE carNum = #{carNum}
+    </select>
+
+    <!--配置一个resultMap 指定返回的类型 -->
+    <resultMap id="ListDR" type="Driver">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="address" property="address" />
+        <result column="carNum" property="carNum" />
+        <result column="sex" property="sex" />
+        <result column="idCard" property="idCard" />
+        <result column="birth_Date" property="birth_Date" />
+        <result column="issue_Date" property="issue_Date" />
+        <result column="permit_Type" property="permit_Type" />
+        <result column="expiration_Date" property="expiration_Date" />
+    </resultMap>
+    <select id="selectAllDriver" parameterType="hashmap" resultMap="ListDR" >
+        SELECT * FROM driver LIMIT #{page},#{rows}
+    </select>
+
+    <select id="getCount_Driver" resultType="int" >
+        SELECT count(id) FROM driver
     </select>
 </mapper>

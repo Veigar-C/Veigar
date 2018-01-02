@@ -72,15 +72,45 @@ function check() {
     }
 }
 
-function selectUser() {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("test").innerHTML = xmlhttp.responseText;
+// function selectUser() {
+//     var xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onreadystatechange = function () {
+//         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+//             document.getElementById("test").innerHTML = xmlhttp.responseText;
+//         }
+//     }
+//     xmlhttp.open("GET", "selectDriver?hmzl="+hmzl+"&cp_num="+cp_num+"&fdj_num="+fdj_num+"&cj_num="+cj_num, true);
+//     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+//     xmlhttp.send();
+//     return false;
+// }
+
+$(document).ready(function(){
+    $("#selectUser").click( function(){
+        var c_type = $("#day").val();//取得用户输入的消息变量
+        var cp_num = $("#cp_num").val();
+        var fdj_num = $("#fdj_num").val();
+        var cj_num = $("#cj_num").val();
+
+    $.ajax({//提交请求给Controller处理。
+        type:"POST",
+        url:"checkDriver",//在url中传参
+        //async : false,//true为异步
+        contentType:"application/json; charset=utf-8",
+        dataType:"json",
+        data: JSON.stringify({
+            'carType': c_type,
+            'carNum':cp_num,
+            'carEngineNum':fdj_num,
+            'carIdentificantionCode':cj_num
+        }),
+        success: function(data){
+            $("#test").html(data);
+            if(data == cp_num){
+                window.location.href = "selectDriver.do?carNum="+data;
+            }
         }
-    }
-    xmlhttp.open("GET", "selectDriver.do?hmzl="+hmzl+"&cp_num="+cp_num+"&fdj_num="+fdj_num+"&cj_num="+cj_num, true);
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send();
+    });
     return false;
-}
+});
+});
