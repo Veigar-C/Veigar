@@ -25,7 +25,7 @@
 			<th field="permit_Type" width="100">电话</th>
 			<th field="expiration_Date" width="100">职务</th>
 			<th field="carNum" width="100">启用监测</th>
-			<th field="" width="100">要重级别</th>
+			<th field="id" width="100">要重级别</th>
 		</tr>
 		</thead>
 	</table>
@@ -45,6 +45,7 @@
         collapsible:false,//是否可折叠的
         fit: true,//自动大小
         url:'testJson',
+        dataType:'JSONP',
         //sortName: 'code',
         //sortOrder: 'desc',
         remoteSort:false,
@@ -59,7 +60,18 @@
             text: '添加',
             iconCls: 'icon-add',
             handler: function() {
-                openDialog("add_dialog","add");
+                var rows = $('#list_data').datagrid('getSelections');
+
+                if (rows.length == 1) {
+                    alert(rows[0].id);
+                } else {
+                    //$.messager.alert('提示', '请选择一条记录！', 'warning');
+                    $.messager.confirm('Confirm','Are you sure you want to delete record?',function(r){
+                        if (r){
+                            alert('ok');
+                        }
+                    });
+                }
             }
         }, '-', {
             text: '修改',
@@ -78,7 +90,7 @@
     //设置分页控件
     var p = $('#list_data').datagrid('getPager');
     $(p).pagination({
-        pageSize: 5,//每页显示的记录条数，默认为10
+        pageSize: 10,//每页显示的记录条数，默认为10
         pageList: [5,10,15],//可以设置每页记录条数的列表
         beforePageText: '第',//页数文本框前显示的汉字
         afterPageText: '页    共 {pages} 页',
