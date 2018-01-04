@@ -1,15 +1,11 @@
 package com.veigar.controller;
 import javax.servlet.http.HttpServletRequest;
 
-import com.veigar.model.DataGrid;
 import com.veigar.model.Driver;
 import com.veigar.model.DrivingLicense;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.veigar.model.ViolationRecord;
 import com.veigar.service.IUserService;
-import net.sf.json.JSONArray;
-import net.sf.json.JSONObject;
-import net.sf.json.JsonConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,8 +16,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class UserController {
@@ -79,16 +76,23 @@ public class UserController {
 
     @RequestMapping("/testJson")
     @ResponseBody
-    public DataGrid testJson(HttpServletRequest request, HttpServletResponse response,@RequestParam int page,int rows) throws IOException {
+    public Map<String,Object> testJson(@RequestParam int page, int rows) throws IOException {
         System.out.println("page:"+page+",rows:"+rows);
         int count = this.userService.getCount_Driver();
         System.out.println(count);
-        List<Driver> list  = this.userService.selectAllDriver(page, rows);
+        List<Driver> list  = this.userService.selectAllDriver(page-1, rows);
 
-        DataGrid dg = new DataGrid();
-        dg.setTotal(count);
-        dg.setDriver(list);
+        Map<String,Object> map = new HashMap<>();
+        map.put("total",count);
+        map.put("rows",list);
+        return map;
+    }
 
-        return dg;
+    @RequestMapping("/delById")
+    @ResponseBody
+    public int delById(int[] ids){
+        System.out.println(ids[0]);
+        this.userService.delById(ids[0]);
+        return ids[0];
     }
 }

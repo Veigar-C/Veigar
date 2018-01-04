@@ -16,4 +16,5 @@ public interface IUserService {
      DrivingLicense dataFilter(DrivingLicense drivingLicense);
      List<Driver> selectAllDriver(int page,int rows);
      int getCount_Driver();
+     void delById(int id);
 }

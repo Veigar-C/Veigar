@@ -53,5 +53,10 @@ public class UserServiceImpl implements IUserService {
         return this.userDao.getCount_Driver();
     }
 
+    @Override
+    public void delById(int id) {
+        this.userDao.delById(id);
+    }
+
 
 }

@@ -16,6 +16,6 @@ public interface IUserDao {
     DrivingLicense selectDriver(String carNum);
     List<ViolationRecord> selectRecord(String carNum);
     List<Driver> selectAllDriver(HashMap map);
-
     int getCount_Driver();
+    void delById(int id);
 }
