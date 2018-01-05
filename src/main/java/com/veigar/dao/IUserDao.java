@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Administrator on 2017/10/9.
@@ -18,4 +19,6 @@ public interface IUserDao {
     List<Driver> selectAllDriver(HashMap map);
     int getCount_Driver();
     void delById(int id);
+    int addDriver(Map<String,Object> map);
+    int checkDriver(Map<String,Object> map);
 }

@@ -37,10 +37,23 @@
         <result column="expiration_Date" property="expiration_Date" />
     </resultMap>
     <select id="selectAllDriver" parameterType="hashmap" resultMap="ListDR" >
-        SELECT * FROM driver LIMIT #{page},#{rows}
+        SELECT * FROM driver WHERE id &gt; (#{page}*#{rows}) ORDER BY id ASC LIMIT #{rows}
     </select>
 
     <select id="getCount_Driver" resultType="int" >
         SELECT count(id) FROM driver
+    </select>
+
+    <select id="delById" resultType="int" >
+        DELETE FROM driver WHERE id = #{id}
+    </select>
+
+    <select id="addDriver"  parameterType="hashmap" resultType="int" >
+        INSERT INTO driver (name,address,carNum,sex,idCard,birth_Date,issue_Date,permit_Type,expiration_Date)
+          VALUES (#{name}, #{address},#{carNum},#{sex},#{idCard},#{birth_Date},#{issue_Date},#{permit_Type},#{expiration_Date})
+    </select>
+
+    <select id="checkDriver" resultType="int" >
+        SELECT IFNULL(MAX(id),0) AS id FROM driver where idCard=#{idCard} or carNum=#{carNum}
     </select>
 </mapper>

@@ -95,4 +95,22 @@ public class UserController {
         this.userService.delById(ids[0]);
         return ids[0];
     }
+
+    @RequestMapping("/testAdd")
+    @ResponseBody
+    public Boolean testAdd(@RequestBody Driver driver){
+        int i = this.userService.checkDriver(driver);
+        Boolean flag=true;
+        if(i==0){
+            this.userService.addDriver(driver);
+        }else{
+            flag=false;
+        }
+        return flag;
+    }
+
+    @RequestMapping("/toDriveForm")
+    public String toDriveForm(){
+        return "driver_form";
+    }
 }
