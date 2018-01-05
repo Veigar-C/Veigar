@@ -23,12 +23,6 @@ $(document).ready(function(){
             {field:'ck',checkbox:true}
         ]],
         toolbar: [{
-            text: '添加',
-            iconCls: 'icon-add',
-            handler: function() {
-                addDriver();
-            }
-        }, '-', {
             text: '修改',
             iconCls: 'icon-comment_edit',
             handler: function() {
