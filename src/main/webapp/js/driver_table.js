@@ -12,7 +12,7 @@ $(document).ready(function(){
         border: true,
         collapsible:false,//是否可折叠的
         fit: true,//自动大小
-        url:'testJson',
+        url:'testJson.do',
         dataType:'JSONP',
         remoteSort:false,
         idField:'fldId',
@@ -72,7 +72,7 @@ function delById() {
     }
     $.ajax({
         async : false,
-        url : "delById",
+        url : "delById.do",
         traditional: true,
         type : 'POST',
         data : {

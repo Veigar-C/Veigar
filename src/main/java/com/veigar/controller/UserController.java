@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -27,7 +28,7 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @RequestMapping("/checkDriver")
+    @RequestMapping("/checkDriver.do")
     public void  checkDriver(HttpServletRequest request, HttpServletResponse response,@RequestBody DrivingLicense drivingLicense) throws IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
@@ -65,17 +66,17 @@ public class UserController {
         return "drivingLicense";
     }
 
-    @RequestMapping("/manager")
+    @RequestMapping("/manager.do")
     public String toManager(){
         return "manager";
     }
 
-    @RequestMapping("/toDriver")
+    @RequestMapping("/toDriver.do")
     public String toDriver(){
         return "driver_table";
     }
 
-    @RequestMapping("/testJson")
+    @RequestMapping("/testJson.do")
     @ResponseBody
     public Map<String,Object> testJson(@RequestParam int page, int rows) throws IOException {
         System.out.println("page:"+page+",rows:"+rows);
@@ -89,7 +90,7 @@ public class UserController {
         return map;
     }
 
-    @RequestMapping("/delById")
+    @RequestMapping("/delById.do")
     @ResponseBody
     public int delById(int[] ids){
         System.out.println(ids[0]);
@@ -97,7 +98,7 @@ public class UserController {
         return ids[0];
     }
 
-    @RequestMapping("/testAdd")
+    @RequestMapping("/testAdd.do")
     @ResponseBody
     public Boolean testAdd(@RequestBody Driver driver){
         int i = this.userService.checkDriver(driver);
@@ -110,27 +111,34 @@ public class UserController {
         return flag;
     }
 
-    @RequestMapping("/toDriveForm")
+    @RequestMapping("/toDriveForm.do")
     public String toDriveForm(){
         return "driver_form";
     }
 
-    @RequestMapping("/toPhonePage")
+    @RequestMapping("/toPhonePage.do")
     public String toPhonePage(){
         return "phone_page";
     }
 
     @RequestMapping("/login")
     @ResponseBody
-    public Boolean login(@RequestBody Admin admin){
+    public Boolean login(HttpSession httpSession,@RequestBody Admin admin){
         int i = this.userService.login(admin);
         Boolean flag = false;
         if(i==0){
             System.out.println("账号或密码有误");
         }else{
+            httpSession.setAttribute("username",admin.getUsername());
             flag=true;
             System.out.println("登录成功");
         }
         return flag;
+    }
+
+    @RequestMapping("/Logout.do")
+    public void clientLoginOut( HttpServletResponse response,HttpSession httpSession) throws IOException {
+        httpSession.invalidate();
+        response.sendRedirect("index.jsp");
     }
 }

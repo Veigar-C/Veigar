@@ -21,6 +21,7 @@
 	<body class="easyui-layout" data-options="fit:true,scroll:'no'">
 		<div data-options="region:'north',border:false" style="height: 74px; background: #2596ea; padding: 10px">
 			<span style="font-size: 20px;color: #FFFFFF;">违章查询系统</span>
+			<br/><a href="Logout" style="color: #FFFFFF">注销</a>
 		</div>
 		<div data-options="region:'west',split:true,title:'导航菜单'" style="width: 170px;">
 			<div class="easyui-accordion" data-options="fit:true,border:false">
@@ -31,10 +32,10 @@
 								<span>驾驶证</span>
 								<ul>
 									<li data-options="iconCls:'icon-group_add'" id="">
-										<a href="#" onclick="andTab_tree('驾驶证信息查询','toDriver')"><span>查询</span></a>
+										<a href="#" onclick="andTab_tree('驾驶证信息查询','toDriver.do')"><span>查询</span></a>
 									</li>
 									<li data-options="iconCls:'icon-group_delete'">
-										<a href="#" onclick="andTab_tree('驾驶证信息添加','toDriveForm')"><span>添加</span></a>
+										<a href="#" onclick="andTab_tree('驾驶证信息添加','toDriveForm.do')"><span>添加</span></a>
 									</li>
 								</ul>
 							</li>

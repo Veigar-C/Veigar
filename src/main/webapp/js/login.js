@@ -145,11 +145,10 @@ function tologin(){
             'password': pass
         }),
         error : function() {
-
         },
         success : function(data) {
         	if(data){
-                window.location.href = "http://localhost:8080/veigar/manager";
+                window.location.href = "http://localhost:8080/veigar/manager.do";
 			} else{
         		$('#message').html("用户名或密码有误");
 			}

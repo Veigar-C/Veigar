@@ -94,7 +94,7 @@ $(document).ready(function(){
 
     $.ajax({//提交请求给Controller处理。
         type:"POST",
-        url:"checkDriver",//在url中传参
+        url:"checkDriver.do",//在url中传参
         //async : false,//true为异步
         contentType:"application/json; charset=utf-8",
         dataType:"json",
