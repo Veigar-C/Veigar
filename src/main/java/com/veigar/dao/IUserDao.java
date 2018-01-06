@@ -21,4 +21,5 @@ public interface IUserDao {
     void delById(int id);
     int addDriver(Map<String,Object> map);
     int checkDriver(Map<String,Object> map);
+    int login(Map<String,Object> map);
 }

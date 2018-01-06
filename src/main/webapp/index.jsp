@@ -1,78 +1,74 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Administrator
+  Date: 2018/1/6
+  Time: 12:31
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>违章信息查询</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/viloation.css" />
-    <link rel="stylesheet" href="css/jquery.mobile.min.css" />
-    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
-    <script type="text/javascript" src="js/jquery.mobile.min.js"></script>
-    <script type="text/javascript" src="js/home.js" ></script>
-</head>
-
-</html>
+    <meta charset="utf-8" />
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>-->
+    <title></title>
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/login.js"></script>
+    <script src="js/jquery-1.6.4.min.js"></script>
 </head>
 
 <body>
-
-<div data-role="page">
-
-    <div data-role="header"  data-theme="b">
-        <!--<a href="index.php" data-role="button" data-icon="home">返回首页</a>-->
-        <h1>违章信息查询</h1>
+<div class="header">
+    <div class="contain">
+        <div class="header_logo">
+            <div class="logo_img" />
+            <img src="img/logo.png" />
+        </div>
+        <div class="header_title">
+            <p>违章管理系统</p>
+            <p class="p2">Veigar</p>
+        </div>
     </div>
-    <!-- /头部 -->
-    <div id="test"></div>
-    <div data-role="content"> <!--selectDriver.do-->
-        <form action="" method="post" data-ajax="false">
-            <ul data-role="listview" data-inset="true">
-                <li data-role="fieldcontain">
-                    <fieldset data-role="fieldcontain">
-                        <label for="day" style="vertical-align: 100%;">号牌种类</label>
-                        <select name="carType" id="day">
-                            <option value="大型汽车">大型汽车</option>
-                            <option value="小型汽车">小型汽车</option>
-                            <option value="外籍汽车">外籍汽车</option>
-                            <option value="摩托车">摩托车</option>
-                        </select>
-                    </fieldset>
-                </li>
-                <li data-role="fieldcontain">
-                    <label for="day">车牌号码（粤）</label>
-                    <input type="text" name="carNum" id="cp_num"/>
-                </li>
-                <li data-role="fieldcontain">
-                    <label for="day">发动机号（后四位）</label>
-                    <input type="text" name="carEngineNum" id="fdj_num"/>
-                </li>
-                <li data-role="fieldcontain">
-                    <label for="day">车架号（后六位）</label>
-                    <input type="text" name="carFrame" id="cj_num"/>
-                </li>
-                <li data-role="fieldcontain">
-                    <label for="day">验证码</label>
-                    <input type="text" name="yzm" id="yzm"/>
-                    <input type="button" id="code" onclick="createCode()" class="checkstyle" />
-                </li>
-
-                <li data-role="fieldcontain">
-                    <input type="button" value="提交" data-theme="b" onclick="return check()" id="selectUser"/>
-                </li>
-            </ul>
-        </form>
+    <div class="header_time" id="get_time">
+        <p id="today">今天是:星期？</p>
     </div>
-    <!-- /内容 -->
-
-    <div data-role="footer"  data-theme="b">
-        <h4>请按行驶证上的信息输入</h4>
-    </div>
-    <!-- /底部 -->
 </div>
-<!-- /页面 -->
-
+</div>
+<div style="min-width: 1170px;">
+    <div class="content">
+        <div class="login_position" id="lg-position">
+            <div class="login_content">
+                <div class="login_form">
+                    <form action="login" method="post">
+                        <div class="div-user">
+                            <i class="icon-position icon_user"></i>
+                            <input type="text" name="username" id="username" placeholder="请输入用户名" class="text" />
+                        </div>
+                        <div class="div-password">
+                            <i class="icon-position icon-password"></i>
+                            <input type="password" name="password" id="password" placeholder="请输入密码" />
+                        </div>
+                        <div class="div-check">
+                            <input type="text" id="input" placeholder="请输入验证码" />
+                            <div class="checkbox">
+                                <input type="button" id="code" onclick="createCode()" class="checkstyle" />
+                            </div>
+                        </div>
+                        <div class="submit-position">
+                            <input type="button" value="登录" class="submit_style" onclick="return check()"/>
+                        </div>
+                        <div id="message"></div>
+                    </form>
+                </div>
+            </div>
+            <span class="shadow" id="shadows"></span>
+        </div>
+    </div>
+</div>
+<div class="footer contain">
+    <p>2017 © 政企客户企业画像 by Veigar.</p>
+</div>
 </body>
 
 </html>

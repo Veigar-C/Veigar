@@ -56,4 +56,8 @@
     <select id="checkDriver" resultType="int" >
         SELECT IFNULL(MAX(id),0) AS id FROM driver where idCard=#{idCard} or carNum=#{carNum}
     </select>
+
+    <select id="login" parameterType="hashmap" resultType="int" >
+        SELECT IFNULL(MAX(id),0) AS id FROM admin where username=#{username} and password=#{password}
+    </select>
 </mapper>

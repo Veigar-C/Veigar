@@ -1,6 +1,7 @@
 package com.veigar.controller;
 import javax.servlet.http.HttpServletRequest;
 
+import com.veigar.model.Admin;
 import com.veigar.model.Driver;
 import com.veigar.model.DrivingLicense;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -112,5 +113,24 @@ public class UserController {
     @RequestMapping("/toDriveForm")
     public String toDriveForm(){
         return "driver_form";
+    }
+
+    @RequestMapping("/toPhonePage")
+    public String toPhonePage(){
+        return "phone_page";
+    }
+
+    @RequestMapping("/login")
+    @ResponseBody
+    public Boolean login(@RequestBody Admin admin){
+        int i = this.userService.login(admin);
+        Boolean flag = false;
+        if(i==0){
+            System.out.println("账号或密码有误");
+        }else{
+            flag=true;
+            System.out.println("登录成功");
+        }
+        return flag;
     }
 }

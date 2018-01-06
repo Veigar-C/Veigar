@@ -3,6 +3,7 @@ package com.veigar.service;
 /**
  * Created by Administrator on 2017/10/9.
  */
+import com.veigar.model.Admin;
 import com.veigar.model.Driver;
 import com.veigar.model.DrivingLicense;
 import com.veigar.model.ViolationRecord;
@@ -17,4 +18,7 @@ public interface IUserService {
      List<Driver> selectAllDriver(int page,int rows);
      int getCount_Driver();
      void delById(int id);
+     int addDriver(Driver driver);
+     int checkDriver(Driver driver);
+     int login(Admin admin);
 }
