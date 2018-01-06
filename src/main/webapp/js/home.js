@@ -94,7 +94,7 @@ $(document).ready(function(){
 
     $.ajax({//提交请求给Controller处理。
         type:"POST",
-        url:"checkDriver.do",//在url中传参
+        url:"checkDriver",//在url中传参
         //async : false,//true为异步
         contentType:"application/json; charset=utf-8",
         dataType:"json",
@@ -107,10 +107,9 @@ $(document).ready(function(){
         success: function(data){
             $("#test").html(data);
             if(data == cp_num){
-                window.location.href = "selectDriver.do?carNum="+data;
+                window.location.href = "selectDriver?carNum="+data;
             }
         }
     });
-    return false;
 });
 });

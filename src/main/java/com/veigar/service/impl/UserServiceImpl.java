@@ -33,13 +33,26 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public DrivingLicense dataFilter(DrivingLicense drivingLicense) {
-        DrivingLicense drivingLicense1 = selectDriver(drivingLicense.getCarNum());
-        if(drivingLicense1 != null){
-            drivingLicense1.setCarEngineNum(drivingLicense1.getCarEngineNum().substring(5));
-            drivingLicense1.setCarIdentificantionCode(drivingLicense1.getCarIdentificantionCode().substring(11));
+    public String dataFilter(DrivingLicense drivingLicense) {
+        String message="";
+        DrivingLicense dl = selectDriver(drivingLicense.getCarNum());
+        if(dl != null){
+            dl.setCarEngineNum(dl.getCarEngineNum().substring(5));
+            dl.setCarIdentificantionCode(dl.getCarIdentificantionCode().substring(11));
         }
-        return drivingLicense1;
+
+        if(this.userDao.selectDriver(drivingLicense.getCarNum()) == null){
+            message="车辆不存在";
+        }else if(!dl.getCarType().equals(drivingLicense.getCarType())){
+            message="车辆类型有误";
+        }else if(!dl.getCarEngineNum().equals(drivingLicense.getCarEngineNum())){
+            message="发动机号有误";
+        }else if(!dl.getCarIdentificantionCode().equals(drivingLicense.getCarIdentificantionCode())){
+            message="车架号有误";
+        }else{
+            message=dl.getCarNum();
+        }
+        return message;
     }
 
     @Override

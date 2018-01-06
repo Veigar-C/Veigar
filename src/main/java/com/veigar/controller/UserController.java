@@ -28,37 +28,21 @@ public class UserController {
     @Autowired
     private IUserService userService;
 
-    @RequestMapping("/checkDriver.do")
-    public void  checkDriver(HttpServletRequest request, HttpServletResponse response,@RequestBody DrivingLicense drivingLicense) throws IOException {
+    @RequestMapping("/checkDriver")
+    @ResponseBody
+    public void  checkDriver(HttpServletRequest request,HttpServletResponse response, @RequestBody DrivingLicense drivingLicense) throws IOException {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        //AJAX传入的值
-        String carType = drivingLicense.getCarType();
-        String carNum = drivingLicense.getCarNum();
-        String carEngineNum= drivingLicense.getCarEngineNum();
-        String carFrame = drivingLicense.getCarIdentificantionCode();
-
         //过滤后的对象
-        DrivingLicense dl = this.userService.dataFilter(drivingLicense);
-
+        String message = this.userService.dataFilter(drivingLicense);
+        System.out.println(message);
         ObjectMapper mapper = new ObjectMapper();
-        if(this.userService.selectDriver(carNum) == null ){
-            response.getWriter().write(mapper.writeValueAsString("车辆不存在"));
-        }else if(!carType.equals(dl.getCarType())){
-            response.getWriter().write(mapper.writeValueAsString("车辆类型有误"));
-        }else if(!carEngineNum.equals(dl.getCarEngineNum())){
-            response.getWriter().write(mapper.writeValueAsString("发动机号有误"));
-        }else if(!carFrame.equals(dl.getCarIdentificantionCode())){
-            response.getWriter().write(mapper.writeValueAsString("车架号有误"));
-        }else{
-            response.getWriter().write(mapper.writeValueAsString(carNum));
-            //System.out.println("vrd:"+vrd.toString());
-        }
+        response.getWriter().write(mapper.writeValueAsString(message));
         response.getWriter().close();
     }
 
-    @RequestMapping("/selectDriver.do")
+    @RequestMapping("/selectDriver")
     public String checkDriver(@RequestParam String carNum,Model model){
         List<ViolationRecord> vrd = this.userService.selectRecord(carNum);
         //ViolationRecord vrd = this.userService.selectRecord(carNum);
@@ -116,7 +100,7 @@ public class UserController {
         return "driver_form";
     }
 
-    @RequestMapping("/toPhonePage.do")
+    @RequestMapping("/toPhonePage")
     public String toPhonePage(){
         return "phone_page";
     }

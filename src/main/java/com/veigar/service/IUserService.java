@@ -14,7 +14,7 @@ public interface IUserService {
 
      DrivingLicense selectDriver(String carNum);
      List<ViolationRecord> selectRecord(String carNum);
-     DrivingLicense dataFilter(DrivingLicense drivingLicense);
+     String dataFilter(DrivingLicense drivingLicense);
      List<Driver> selectAllDriver(int page,int rows);
      int getCount_Driver();
      void delById(int id);
