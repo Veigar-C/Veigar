@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="EasyUI/demo/demo.css">
 	<script type="text/javascript" src="EasyUI/jquery.min.js"></script>
 	<script type="text/javascript" src="EasyUI/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="js/driver_table.js"></script>
+	<script type="text/javascript" src="js/vR_table.js"></script>
 </head>
 
 <body class="easyui-layout">
@@ -17,16 +17,15 @@
 	<table id="list_data" cellspacing="0" cellpadding="0">
 		<thead>
 		<tr>
-			<th field="name" width="100">姓名</th>
-			<th field="address" width="100">地址</th>
-			<th field="sex" width="100">性别</th>
-			<th field="idCard" width="100">身份证号</th>
-			<th field="birth_Date" width="100">出生日期</th>
-			<th field="issue_Date" width="100">发证日期</th>
-			<th field="permit_Type" width="100">准驾类型</th>
-			<th field="expiration_Date" width="100">有效期限</th>
-			<th field="carNum" width="100">车牌号</th>
 			<th field="id" width="100" data-options="hidden:'true'">id</th>
+			<th field="carNum" width="100">车牌号</th>
+			<th field="vDate" width="100">违章日期</th>
+			<th field="vContent" width="100">违章内容</th>
+			<th field="vState" width="100">办理状态</th>
+			<th field="vPoints" width="100">扣分数</th>
+			<th field="vAddress" width="100">地址</th>
+			<th field="vMoney" width="100">罚款数</th>
+			<th field="vSMoney" width="100">手续费</th>
 		</tr>
 		</thead>
 	</table>

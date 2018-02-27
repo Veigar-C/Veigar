@@ -12,7 +12,7 @@ $(document).ready(function(){
         border: true,
         collapsible:false,//是否可折叠的
         fit: true,//自动大小
-        url:'testJson.do',
+        url:'selectVR.do',
         dataType:'JSONP',
         remoteSort:false,
         idField:'fldId',
@@ -53,13 +53,13 @@ $(document).ready(function(){
     });
 });
 function addDriver() {
-    window.location.href = "toDriveForm.do";
+    window.location.href = "toVRForm.do";
 }
 
 function modifyDriver() {
     var rows = $('#list_data').datagrid('getSelections');
     if (rows.length == 1) {
-        window.location.href = "toModifyDriver.do?id="+rows[0].id;
+        window.location.href = "toModifyVRForm.do?id="+rows[0].id;
     } else {
         $.messager.alert('提示', '请选择一条记录！', 'warning');
         // $.messager.confirm('Confirm','Are you sure you want to delete record?',function(flag){
@@ -78,7 +78,7 @@ function delById() {
     }
     $.ajax({
         async : false,
-        url : "delById.do",
+        url : "delVRById.do",
         traditional: true,
         type : 'POST',
         data : {
@@ -89,6 +89,7 @@ function delById() {
             alert('删除过程出现了某些错误');
         },
         success : function(data) {
+            alert("删除成功")
             $('#list_data').datagrid('reload');
         }
     });

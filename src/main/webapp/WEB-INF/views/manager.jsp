@@ -29,26 +29,26 @@
 					<div style="margin: 5px">
 						<ul class="tree easyui-tree" data-options="animate:true,lines:true">
 							<li data-options="iconCls:'icon-group'">
-								<span>驾驶证</span>
-								<ul>
-									<li data-options="iconCls:'icon-group_add'" id="">
-										<a href="#" onclick="andTab_tree('驾驶证信息查询','toDriver.do')"><span>查询</span></a>
-									</li>
-									<li data-options="iconCls:'icon-group_delete'">
-										<a href="#" onclick="andTab_tree('驾驶证信息添加','toDriveForm.do')"><span>添加</span></a>
-									</li>
-								</ul>
+								<a href="#" onclick="andTab_tree('驾驶证信息查询','toDriver.do')"><span>驾驶证</span></a>
+								<%--<ul>--%>
+									<%--<li data-options="iconCls:'icon-group_add'" id="">--%>
+										<%--<a href="#" onclick="andTab_tree('驾驶证信息查询','toDriver.do')"><span>查询</span></a>--%>
+									<%--</li>--%>
+									<%--<li data-options="iconCls:'icon-group_delete'">--%>
+										<%--<a href="#" onclick="andTab_tree('驾驶证信息添加','toDriveForm.do')"><span>添加</span></a>--%>
+									<%--</li>--%>
+								<%--</ul>--%>
 							</li>
-							<li data-options="state:'closed',iconCls:'icon-joystick'">
-								<span>行驶证</span>
-								<ul>
-									<li data-options="iconCls:'icon-joystick_add'">
-										<span>查询</span>
-									</li>
-									<li data-options="iconCls:'icon-joystick_add'">
-										<span>添加</span>
-									</li>
-								</ul>
+							<li data-options="iconCls:'icon-joystick'">
+								<a href="#" onclick="andTab_tree('行驶证证信息查询','toDL.do')"><span>行驶证</span></a>
+								<%--<ul> state:'closed',--%>
+									<%--<li data-options="iconCls:'icon-joystick_add'">--%>
+										<%--<a href="#" onclick="andTab_tree('行驶证证信息查询','toDL.do')"><span>查询</span></a>--%>
+									<%--</li>--%>
+									<%--<li data-options="iconCls:'icon-joystick_add'">--%>
+										<%--<a href="#" onclick="andTab_tree('行驶证证信息添加','toDLForm.do')"><span>添加</span></a>--%>
+									<%--</li>--%>
+								<%--</ul>--%>
 							</li>
 						</ul>
 					</div>
@@ -59,28 +59,25 @@
 							<span>违章记录</span>
 							<ul>
 								<li data-options="iconCls:'icon-joystick_add'">
-									<span>查询</span>
+									<a href="#" onclick="andTab_tree('违章记录','toViolationRecord.do')"><span>查询</span>
 								</li>
-								<li data-options="iconCls:'icon-joystick_add'">
-									<span>添加</span>
-								</li>
+								<%--<li data-options="iconCls:'icon-joystick_add'">--%>
+									<%--<span>添加</span>--%>
+								<%--</li>--%>
 							</ul>
 						</li>
 					</ul>
 				</div>
 				<div title="系统设置" style="padding: 10px">
 					<ul class="tree easyui-tree" data-options="animate:true,lines:true">
-						<li data-options="state:'closed',iconCls:'icon-joystick'">
-							<span>管理员</span>
-							<ul>
+
 								<li data-options="iconCls:'icon-joystick_add'">
-									<span>密码修改</span>
+									<a href="#" onclick="andTab_tree('登录密码修改','modifyPassword.do')"><span>密码修改</span></a>
 								</li>
 								<li data-options="iconCls:'icon-joystick_add'">
-									<span>添加新的管理员</span>
+									<a href="#" onclick="andTab_tree('添加新的管理员','toRegister.do')"><span>添加新的管理员</span></a>
 								</li>
-							</ul>
-						</li>
+
 					</ul>
 				</div>
 			</div>

@@ -95,21 +95,7 @@ public class Driver {
         this.expiration_Date = expiration_Date;
     }
 
-    public Driver() {
-    }
 
-    public Driver(int id, String name, String address, String carNum, String sex, int idCard, String birth_Date, String issue_Date, String permit_Type, String expiration_Date) {
-        this.id = id;
-        this.name = name;
-        this.address = address;
-        this.carNum = carNum;
-        this.sex = sex;
-        this.idCard = idCard;
-        this.birth_Date = birth_Date;
-        this.issue_Date = issue_Date;
-        this.permit_Type = permit_Type;
-        this.expiration_Date = expiration_Date;
-    }
 
     @Override
     public String toString() {

@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--@declare id="questel"--%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,6 @@
     <div data-role="content">
         <form>
             <c:forEach items="${requestScope.violationRecord}" var="dl">
-
 
             <ul data-role="listview" data-inset="true">
                 <li data-role="fieldcontain">

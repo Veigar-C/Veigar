@@ -19,6 +19,7 @@
         <result column="vSMoney" property="vSMoney" />
         <result column="vAddress" property="vAddress" />
     </resultMap>
+
     <select id="selectRecord" resultMap="ListVR" >
         SELECT * FROM violationrecord WHERE carNum = #{carNum}
     </select>
@@ -36,28 +37,116 @@
         <result column="permit_Type" property="permit_Type" />
         <result column="expiration_Date" property="expiration_Date" />
     </resultMap>
+
+    <!--配置一个resultMap 指定返回的类型 -->
+    <resultMap id="ListDL" type="DrivingLicense">
+        <result column="carNum" property="carNum" />
+        <result column="carType" property="carType" />
+        <result column="carProperty" property="carProperty" />
+        <result column="carBrand" property="carBrand" />
+        <result column="carIdentificantionCode" property="carIdentificantionCode" />
+        <result column="carEngineNum" property="carEngineNum" />
+        <result column="registerDate" property="registerDate" />
+        <result column="issuingDate" property="issuingDate" />
+        <result column="loadNum" property="loadNum" />
+    </resultMap>
+
     <select id="selectAllDriver" parameterType="hashmap" resultMap="ListDR" >
         SELECT * FROM driver WHERE id &gt; (#{page}*#{rows}) ORDER BY id ASC LIMIT #{rows}
+    </select>
+
+    <select id="selectAllDL" parameterType="hashmap" resultMap="ListDL" >
+        SELECT * FROM drivinglicense WHERE id &gt; (#{page}*#{rows}) ORDER BY id ASC LIMIT #{rows}
+    </select>
+
+    <select id="selectAllVR" parameterType="hashmap" resultMap="ListVR" >
+        SELECT * FROM violationrecord WHERE id &gt; (#{page}*#{rows}) ORDER BY id ASC LIMIT #{rows}
     </select>
 
     <select id="getCount_Driver" resultType="int" >
         SELECT count(id) FROM driver
     </select>
 
-    <select id="delById" resultType="int" >
+    <select id="getCount_DL" resultType="int" >
+        SELECT count(carNum) FROM drivinglicense
+    </select>
+
+    <select id="getCount_VR" resultType="int" >
+        SELECT count(carNum) FROM violationrecord
+    </select>
+
+    <select id="delById" >
         DELETE FROM driver WHERE id = #{id}
     </select>
 
-    <select id="addDriver"  parameterType="hashmap" resultType="int" >
+    <select id="delDLById" >
+        DELETE FROM drivinglicense WHERE id = #{id}
+    </select>
+
+    <select id="delVRById" >
+        DELETE FROM violationRecord WHERE id = #{id}
+    </select>
+
+    <select id="addDriver"  parameterType="hashmap" >
         INSERT INTO driver (name,address,carNum,sex,idCard,birth_Date,issue_Date,permit_Type,expiration_Date)
           VALUES (#{name}, #{address},#{carNum},#{sex},#{idCard},#{birth_Date},#{issue_Date},#{permit_Type},#{expiration_Date})
+    </select>
+
+    <select id="addDL"  parameterType="hashmap" >
+        INSERT INTO drivinglicense (carNum,carType,carProperty,carBrand,carIdentificantionCode,carEngineNum,registerDate,issuingDate,loadNum)
+        VALUES (#{carNum}, #{carType},#{carProperty},#{carBrand},#{carIdentificantionCode},#{carEngineNum},#{registerDate},#{issuingDate},#{loadNum})
+    </select>
+
+    <select id="addVR"  parameterType="hashmap" >
+        INSERT INTO violationRecord (carNum,vDate,vContent,vState,vPoints,vAddress,vMoney,vSMoney)
+        VALUES (#{carNum}, #{vDate},#{vContent},#{vState},#{vPoints},#{vAddress},#{vMoney},#{vSMoney})
     </select>
 
     <select id="checkDriver" resultType="int" >
         SELECT IFNULL(MAX(id),0) AS id FROM driver where idCard=#{idCard} or carNum=#{carNum}
     </select>
 
+    <select id="checkDL" resultType="int" >
+        SELECT IFNULL(MAX(id),0) AS id FROM drivinglicense where carNum=#{carNum} or carIdentificantionCode=#{carIdentificantionCode} or carEngineNum=#{carEngineNum}
+    </select>
+
     <select id="login" parameterType="hashmap" resultType="int" >
         SELECT IFNULL(MAX(id),0) AS id FROM admin where username=#{username} and password=#{password}
+    </select>
+
+    <select id="selectDriverById" resultMap="ListDR" >
+        SELECT * FROM driver WHERE id = #{id}
+    </select>
+
+    <select id="selectDLById" resultMap="ListDL" >
+        SELECT * FROM drivinglicense WHERE id = #{id}
+    </select>
+
+    <select id="selectVRById" resultMap="ListVR" >
+        SELECT * FROM violationRecord WHERE id = #{id}
+    </select>
+
+    <select id="modifyPW" parameterType="hashmap" >
+        UPDATE admin set password = #{password} where username = #{username}
+    </select>
+
+    <select id="modifyDL" parameterType="hashmap">
+        UPDATE drivinglicense set carNum=#{carNum},carType=#{carType},carProperty=#{carProperty},carBrand=#{carBrand},carIdentificantionCode=#{carIdentificantionCode},carEngineNum=#{carEngineNum},registerDate=#{registerDate},issuingDate=#{issuingDate},loadNum=#{loadNum} Where id =#{id}
+    </select>
+
+    <select id="modifyDriver" parameterType="hashmap">
+        UPDATE driver set name=#{name},address=#{address},carNum=#{carNum},sex=#{sex},idCard=#{idCard},birth_Date=#{birth_Date},issue_Date=#{issue_Date},permit_Type=#{permit_Type},expiration_Date=#{expiration_Date} Where id =#{id}
+    </select>
+
+    <select id="checkUser" resultType="int">
+        SELECT IFNULL(MAX(id),0) FROM admin where username=#{username}
+    </select>
+
+    <select id="registerAdmin"  parameterType="hashmap" >
+        INSERT INTO admin(username,password) VALUES (#{username},#{password})
+    </select>
+
+    <select id="modifyVR" parameterType="hashmap">
+        UPDATE violationRecord set carNum=#{carNum},vDate=#{vDate},vContent=#{vContent},vState=#{vState},vPoints=#{vPoints},vAddress=#{vAddress},vMoney=#{vMoney},vSMoney=#{vSMoney} Where id =#{id}
     </select>
 </mapper>

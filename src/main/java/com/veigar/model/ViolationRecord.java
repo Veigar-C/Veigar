@@ -4,6 +4,7 @@ package com.veigar.model;
  * Created by Administrator on 2017/12/6.
  */
 public class ViolationRecord {
+    private int id;
     private String carNum;
     private String vContent;
     private String vDate;
@@ -13,6 +14,13 @@ public class ViolationRecord {
     private int vSMoney;
     private String vAddress;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getCarNum() {
         return carNum;
@@ -78,7 +86,8 @@ public class ViolationRecord {
         this.vSMoney = vSMoney;
     }
 
-    public ViolationRecord(String carNum, String vContent, String vDate, String vState, int vPoints, int vMoney, int vSMoney, String vAddress) {
+    public ViolationRecord(int id, String carNum, String vContent, String vDate, String vState, int vPoints, int vMoney, int vSMoney, String vAddress) {
+        this.id = id;
         this.carNum = carNum;
         this.vContent = vContent;
         this.vDate = vDate;

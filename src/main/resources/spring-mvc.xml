@@ -27,11 +27,11 @@
     </bean>
 
     <mvc:interceptors>
-    <mvc:interceptor>
-        <mvc:mapping path="/*.do"/>
-        <bean id="handlerInterceptor" class="com.veigar.Interceptor.HandlerInterceptor">
-        </bean>
-    </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/*.do"/>
+                <bean id="handlerInterceptor" class="com.veigar.Interceptor.HandlerInterceptor">
+                </bean>
+        </mvc:interceptor>
     </mvc:interceptors>
     <!-- 配置nultipartresolver,注意：id名必须这样写，不然会报错
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

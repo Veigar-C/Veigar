@@ -4,10 +4,64 @@ package com.veigar.model;
  * Created by Administrator on 2017/12/5.
  */
 public class DrivingLicense {
+    private int id;
     private String carNum;
     private String carType;
+    private String carProperty;
+    private String carBrand;
     private String carIdentificantionCode;
     private String carEngineNum;
+    private String registerDate;
+    private String issuingDate;
+    private String loadNum;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCarProperty() {
+        return carProperty;
+    }
+
+    public void setCarProperty(String carProperty) {
+        this.carProperty = carProperty;
+    }
+
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
+
+    public String getRegisterDate() {
+        return registerDate;
+    }
+
+    public void setRegisterDate(String registerDate) {
+        this.registerDate = registerDate;
+    }
+
+    public String getIssuingDate() {
+        return issuingDate;
+    }
+
+    public void setIssuingDate(String issuingDate) {
+        this.issuingDate = issuingDate;
+    }
+
+    public String getLoadNum() {
+        return loadNum;
+    }
+
+    public void setLoadNum(String loadNum) {
+        this.loadNum = loadNum;
+    }
 
     public String getCarNum() {
         return carNum;
@@ -52,13 +106,16 @@ public class DrivingLicense {
 
     }
 
-    @Override
-    public String toString() {
-        return "DrivingLicense{" +
-                "carNum='" + carNum + '\'' +
-                ", carType='" + carType + '\'' +
-                ", carIdentificantionCode=" + carIdentificantionCode +
-                ", carEngineNum=" + carEngineNum +
-                '}';
+    public DrivingLicense(int id, String carNum, String carType, String carProperty, String carBrand, String carIdentificantionCode, String carEngineNum, String registerDate, String issuingDate, String loadNum) {
+        this.id = id;
+        this.carNum = carNum;
+        this.carType = carType;
+        this.carProperty = carProperty;
+        this.carBrand = carBrand;
+        this.carIdentificantionCode = carIdentificantionCode;
+        this.carEngineNum = carEngineNum;
+        this.registerDate = registerDate;
+        this.issuingDate = issuingDate;
+        this.loadNum = loadNum;
     }
 }
