@@ -1,11 +1,11 @@
 package com.veigar.controller;
 import javax.servlet.http.HttpServletRequest;
 
-import com.veigar.model.Admin;
-import com.veigar.model.Driver;
-import com.veigar.model.DrivingLicense;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.google.gson.Gson;
+import com.veigar.model.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.veigar.model.ViolationRecord;
 import com.veigar.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -44,6 +44,7 @@ public class UserController {
 
     @RequestMapping("/selectDriver")
     public String checkDriver(@RequestParam String carNum,Model model){
+        System.out.println("carNum:"+carNum);
         List<ViolationRecord> vrd = this.userService.selectRecord(carNum);
         //ViolationRecord vrd = this.userService.selectRecord(carNum);
         model.addAttribute("violationRecord",vrd);
@@ -251,6 +252,11 @@ public class UserController {
         return "violationRecord";
     }
 
+    @RequestMapping("/toComplainRecord.do")
+    public String toComplainRecord(){
+        return "complainRecord";
+    }
+
     @RequestMapping("/selectVR.do")
     @ResponseBody
     public Map<String,Object> selectVR(@RequestParam int page, int rows) throws IOException {
@@ -259,6 +265,20 @@ public class UserController {
         System.out.println(count);
         List<ViolationRecord> list  = this.userService.selectAllVR(page-1, rows);
 
+        Map<String,Object> map = new HashMap<>();
+        map.put("total",count);
+        map.put("rows",list);
+        return map;
+    }
+
+    @RequestMapping("/selectCR.do")
+    @ResponseBody
+    public Map<String,Object> selectCR(@RequestParam int page, int rows) throws IOException {
+        PageHelper.startPage(page, rows, true);
+        List<ComplainRecord> list  = this.userService.selectAllCR();
+        PageInfo<ComplainRecord> info = new PageInfo(list);
+        list =info.getList();
+        long count = info.getTotal();
         Map<String,Object> map = new HashMap<>();
         map.put("total",count);
         map.put("rows",list);
@@ -282,6 +302,8 @@ public class UserController {
     public Boolean modifyVR(@RequestBody ViolationRecord violationRecord){
         System.out.println("modifyVR");
         Boolean flag=true;
+//        System.out.println("vNum:"+violationRecord.getvNum());
+        System.out.println("vCode:"+violationRecord.getCode());
         this.userService.modifyVR(violationRecord);
         return flag;
     }
@@ -299,5 +321,24 @@ public class UserController {
     public int delVRById(int[] ids){
         this.userService.delVRById(ids[0]);
         return ids[0];
+    }
+
+    @RequestMapping("/delCRById.do")
+    @ResponseBody
+    public int delCRById(int[] ids){
+        this.userService.delCRById(ids[0]);
+        return ids[0];
+    }
+
+    @RequestMapping("/toCRForm")
+    public String toCRForm(String code,Model model){
+        model.addAttribute("code",code);
+        return "complainPhonePage";
+    }
+
+    @RequestMapping("/submitCR")
+    public String submitCR(String code,String phone,String content){
+        this.userService.submitCR(code,phone,content);
+        return "phone_page";
     }
 }

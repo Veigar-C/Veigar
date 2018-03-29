@@ -18,6 +18,7 @@
 		<thead>
 		<tr>
 			<th field="id" width="100" data-options="hidden:'true'">id</th>
+			<th field="code" width="100">违章单号</th>
 			<th field="carNum" width="100">车牌号</th>
 			<th field="vDate" width="100">违章日期</th>
 			<th field="vContent" width="100">违章内容</th>

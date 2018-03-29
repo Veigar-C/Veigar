@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/jquery.mobile.min.css">
     <script src="js/jquery-1.6.4.min.js"></script>
     <script src="js/jquery.mobile.min.js"></script>
+    <script src="js/dL_fromPhonePage.js"></script>
 </head>
 <body>
 <div data-role="page" id="pageone">
@@ -18,13 +19,14 @@
     </div>
 
     <div data-role="content">
+        <label>carNum:${param.carNum}</label>
         <form>
             <c:forEach items="${requestScope.violationRecord}" var="dl">
-
             <ul data-role="listview" data-inset="true">
                 <li data-role="fieldcontain">
                     <div class="ui-grid-a">
                         <div class="ui-block-a">
+                            <label style="display: none" id="code">${dl.code}</label>
                             <label for="quesTel">办理标志:${dl.vState}</label>
                         </div>
                         <div class="ui-block-b">
@@ -69,10 +71,21 @@
                         </div>
                     </div>
                 </li>
+                <li data-role="fieldcontain">
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a">
+                            <label >选择</label>
+                        </div>
+                        <div class="ui-block-b">
+                            <input type="checkbox" id="select" name="select" value="${dl.code}">
+                        </div>
+                    </div>
+                </li>
             </ul>
             </c:forEach>
             <li data-role="fieldcontain">
                 <input type="submit" value="办理" data-theme="b" onclick="check()" />
+                <input type="submit" value="申诉" data-theme="b" onclick="complain()" />
             </li>
         </form>
     </div>

@@ -4,10 +4,7 @@ package com.veigar.service.impl;
  * Created by Administrator on 2017/10/9.
  */
 import com.veigar.dao.IUserDao;
-import com.veigar.model.Admin;
-import com.veigar.model.Driver;
-import com.veigar.model.DrivingLicense;
-import com.veigar.model.ViolationRecord;
+import com.veigar.model.*;
 import com.veigar.service.IUserService;
 import org.springframework.stereotype.Service;
 
@@ -76,7 +73,13 @@ public class UserServiceImpl implements IUserService {
         HashMap map = new HashMap();
         map.put("page",page);
         map.put("rows",rows);
+
         return this.userDao.selectAllVR(map);
+    }
+
+    @Override
+    public List<ComplainRecord> selectAllCR() {
+        return this.userDao.selectAllCR();
     }
 
     @Override
@@ -107,6 +110,11 @@ public class UserServiceImpl implements IUserService {
     @Override
     public void delVRById(int id) {
         this.userDao.delVRById(id);
+    }
+
+    @Override
+    public void delCRById(int id) {
+        this.userDao.delCRById(id);
     }
 
     @Override
@@ -183,6 +191,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public Map<String, Object> violationRecordMap(ViolationRecord violationRecord) {
         Map<String,Object> map = new HashMap<>();
+        map.put("code",violationRecord.getCode());
         map.put("carNum",violationRecord.getCarNum());
         map.put("vDate",violationRecord.getvDate());
         map.put("vContent",violationRecord.getvContent());
@@ -256,5 +265,14 @@ public class UserServiceImpl implements IUserService {
         this.userDao.modifyVR(map);
     }
 
-
+    @Override
+    public void submitCR(String code,String phone,String content) {
+        String c[] = code.split(",");
+        for(String s :c){
+            System.out.println(s);
+        }
+        for(int i=0;i<c.length;i++){
+            this.userDao.submitCR(c[i],phone,content);
+        }
+    }
 }

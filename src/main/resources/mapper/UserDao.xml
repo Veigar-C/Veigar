@@ -10,7 +10,9 @@
 
     <!--配置一个resultMap 指定返回的类型 -->
     <resultMap id="ListVR" type="ViolationRecord">
-        <id column="carNum" property="carNum" />
+        <id column="id" property="id" />
+        <result column="carNum" property="carNum" />
+        <result column="code" property="code" />
         <result column="vContent" property="vContent" />
         <result column="vDate" property="vDate" />
         <result column="vState" property="vState" />
@@ -59,7 +61,7 @@
         SELECT * FROM drivinglicense WHERE id &gt; (#{page}*#{rows}) ORDER BY id ASC LIMIT #{rows}
     </select>
 
-    <select id="selectAllVR" parameterType="hashmap" resultMap="ListVR" >
+    <select id="selectAllVR" parameterType="hashmap" resultType="ViolationRecord">
         SELECT * FROM violationrecord WHERE id &gt; (#{page}*#{rows}) ORDER BY id ASC LIMIT #{rows}
     </select>
 
@@ -98,8 +100,8 @@
     </select>
 
     <select id="addVR"  parameterType="hashmap" >
-        INSERT INTO violationRecord (carNum,vDate,vContent,vState,vPoints,vAddress,vMoney,vSMoney)
-        VALUES (#{carNum}, #{vDate},#{vContent},#{vState},#{vPoints},#{vAddress},#{vMoney},#{vSMoney})
+        INSERT INTO violationRecord (code,carNum,vDate,vContent,vState,vPoints,vAddress,vMoney,vSMoney)
+        VALUES (#{code},#{carNum}, #{vDate},#{vContent},#{vState},#{vPoints},#{vAddress},#{vMoney},#{vSMoney})
     </select>
 
     <select id="checkDriver" resultType="int" >
@@ -147,6 +149,20 @@
     </select>
 
     <select id="modifyVR" parameterType="hashmap">
-        UPDATE violationRecord set carNum=#{carNum},vDate=#{vDate},vContent=#{vContent},vState=#{vState},vPoints=#{vPoints},vAddress=#{vAddress},vMoney=#{vMoney},vSMoney=#{vSMoney} Where id =#{id}
+        UPDATE violationRecord
+        set code=#{code},carNum=#{carNum},vDate=#{vDate},vContent=#{vContent},vState=#{vState},vPoints=#{vPoints},vAddress=#{vAddress},vMoney=#{vMoney},vSMoney=#{vSMoney}
+        Where id =#{id}
+    </select>
+
+    <select id="selectAllCR" resultType="ComplainRecord" >
+        SELECT * FROM complainrecord
+    </select>
+
+    <select id="delCRById" >
+        DELETE FROM complainrecord WHERE id = #{id}
+    </select>
+
+    <select id="submitCR" >
+        INSERT INTO complainrecord(code,phone,content) VALUES (#{code},#{phone},#{content})
     </select>
 </mapper>

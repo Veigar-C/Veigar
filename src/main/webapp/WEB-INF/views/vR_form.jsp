@@ -29,6 +29,11 @@
         <form id="ff" method="post" action="">
             <table cellpadding="5">
                 <tr>
+                    <td>违章单号:</td>
+                    <td><input class="easyui-textbox" type="text" id="code" data-options="required:true" value="${requestScope.violationRecord.code}"/>
+                    </td>
+                </tr>
+                <tr>
                     <td>车牌号:<input type="hidden" name="id" id="id" value="${requestScope.violationRecord.id}"></td>
                     <td><input class="easyui-textbox" type="text" id="carNum" data-options="required:true" value="${requestScope.violationRecord.carNum}"/>
                     </td>

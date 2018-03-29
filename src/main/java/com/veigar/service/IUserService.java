@@ -3,10 +3,7 @@ package com.veigar.service;
 /**
  * Created by Administrator on 2017/10/9.
  */
-import com.veigar.model.Admin;
-import com.veigar.model.Driver;
-import com.veigar.model.DrivingLicense;
-import com.veigar.model.ViolationRecord;
+import com.veigar.model.*;
 
 import java.util.List;
 import java.util.Map;
@@ -19,12 +16,14 @@ public interface IUserService {
      List<Driver> selectAllDriver(int page,int rows);
      List<DrivingLicense> selectAllDL(int page,int rows);
      List<ViolationRecord> selectAllVR(int page,int rows);
+     List<ComplainRecord> selectAllCR();
      int getCount_Driver();
      int getCount_DL();
      int getCount_VR();
      void delById(int id);
      void delDLById(int id);
      void delVRById(int id);
+     void delCRById(int id);
      void addDriver(Driver driver);
      void addDL(DrivingLicense drivingLicense);
      void addVR(ViolationRecord violationRecord);
@@ -43,4 +42,5 @@ public interface IUserService {
      DrivingLicense selectDLById(int i);
      ViolationRecord selectVRById(int i);
      void modifyVR(ViolationRecord violationRecord);
+     void submitCR(String code,String phone,String content);
 }

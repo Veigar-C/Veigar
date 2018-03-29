@@ -5,6 +5,7 @@
 
 function submitForm() {
     var id = $("#id").val();
+    var code=$("#code").val();
     var carNum = $("#carNum").val();
     var vDate = $("#vDate").val();
     var vContent = $("#vContent").val();
@@ -28,6 +29,7 @@ function submitForm() {
         data: JSON.stringify({
             'id':id,
             'carNum': carNum,
+            'code':code,
             'vDate': vDate,
             'vContent': vContent,
             'vState': vState,

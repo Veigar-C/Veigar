@@ -6,6 +6,7 @@ package com.veigar.model;
 public class ViolationRecord {
     private int id;
     private String carNum;
+    private String code;
     private String vContent;
     private String vDate;
     private String vState;
@@ -28,6 +29,14 @@ public class ViolationRecord {
 
     public void setCarNum(String carNum) {
         this.carNum = carNum;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getvContent() {
@@ -62,14 +71,6 @@ public class ViolationRecord {
         this.vPoints = vPoints;
     }
 
-    public String getvAddress() {
-        return vAddress;
-    }
-
-    public void setvAddress(String vAddress) {
-        this.vAddress = vAddress;
-    }
-
     public int getvMoney() {
         return vMoney;
     }
@@ -86,19 +87,11 @@ public class ViolationRecord {
         this.vSMoney = vSMoney;
     }
 
-    public ViolationRecord(int id, String carNum, String vContent, String vDate, String vState, int vPoints, int vMoney, int vSMoney, String vAddress) {
-        this.id = id;
-        this.carNum = carNum;
-        this.vContent = vContent;
-        this.vDate = vDate;
-        this.vState = vState;
-        this.vPoints = vPoints;
-        this.vMoney = vMoney;
-        this.vSMoney = vSMoney;
+    public String getvAddress() {
+        return vAddress;
+    }
+
+    public void setvAddress(String vAddress) {
         this.vAddress = vAddress;
     }
-
-    public ViolationRecord() {
-    }
-
 }
